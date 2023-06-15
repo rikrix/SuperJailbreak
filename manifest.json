@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "SuperJailbreak",
+    "version": "1.0",
+    "description": "Extension to automate input in ChatGPT",
+    "permissions": [
+        "activeTab",
+        "clipboardWrite",
+        "tabs",
+        "storage",
+        "contextMenus",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "main.js"
+            ]
+        }
+    ]
+}
